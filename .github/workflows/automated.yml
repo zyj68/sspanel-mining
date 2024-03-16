@@ -23,12 +23,12 @@ jobs:
       # ============================================
       # TODO [√] 检查工作分支及 Workflows 运行环境
       # ============================================
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       # ============================================
       # TODO [√] 创建 Python3.6+ 编译环境
       # ============================================
       - name: Set up Python 3.9
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v4
         with:
           python-version: 3.9
       # ============================================
