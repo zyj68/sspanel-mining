@@ -24,7 +24,10 @@ def _download_driver(*args, **kwargs):
     version = kwargs.get("version", "latest")
 
     logger.debug("适配 ChromeDriver...")
-    ChromeDriverManager(version=version).install()
+    # 在这里指定特定的 ChromeDriver 版本
+    driver_path = ChromeDriverManager(version="114.0.5735.90").install()
+    # 之后你可能需要将 driver_path 返回出来，以便后续使用
+    return driver_path
 
 
 class PerformanceReleaser(CoroutineSpeedup):
